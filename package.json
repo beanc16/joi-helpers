@@ -1,6 +1,6 @@
 {
     "name": "@beanc16/joi-helpers",
-    "version": "0.2.2",
+    "version": "0.2.3",
     "description": "Helpers to make JOI validation simpler.",
     "author": {
         "name": "beanc16",
