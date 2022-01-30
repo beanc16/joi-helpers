@@ -1,5 +1,5 @@
 const Joi = require("joi");
-const { objectId: objectIdRules } = require("./rules");
+const { joiMongoDbObjectIdRules: objectIdRules } = require("./rules");
 
 
 
@@ -13,7 +13,7 @@ const JoiMongoDbObjectId = Joi.extend(
     messages: {
         "string.objectId": joiObjectIdMsg,
     },
-    rules: objectIdRules,
+    rules: objectIdRules.get("string"),
 },
 
 // Number
@@ -23,7 +23,7 @@ const JoiMongoDbObjectId = Joi.extend(
     messages: {
         "number.objectId": joiObjectIdMsg,
     },
-    rules: objectIdRules,
+    rules: objectIdRules.get("number"),
 });
 
 
