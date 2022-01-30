@@ -34,7 +34,8 @@
         "src/**/*"
     ],
     "dependencies": {
-        "joi": "^17.6.0"
+        "joi": "^17.6.0",
+        "mongodb": "^4.3.1"
     },
     "devDependencies": {
         "eslint": "^8.8.0"
