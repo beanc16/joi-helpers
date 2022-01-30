@@ -5,7 +5,7 @@ const { joiMongoDbObjectIdRules: objectIdRules } = require("./rules");
 
 const joiObjectIdMsg = "{{#label}} must be a valid MongoDb ObjectId";
 
-const JoiMongoDbObjectId = Joi.extend(
+const ObjectIdExtendObjs = [
 // String
 {
     type: "string",
@@ -24,8 +24,8 @@ const JoiMongoDbObjectId = Joi.extend(
         "number.objectId": joiObjectIdMsg,
     },
     rules: objectIdRules.get("number"),
-});
+}];
 
 
 
-module.exports = JoiMongoDbObjectId;
+module.exports = ObjectIdExtendObjs;
