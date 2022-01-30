@@ -1,0 +1,39 @@
+{
+    "name": "@beanc16/joi-helpers",
+    "version": "0.1.0",
+    "description": "Helpers to make JOI validation simpler.",
+    "author": {
+        "name": "beanc16",
+        "url": "https://github.com/beanc16"
+    },
+    "license": "MIT",
+    "main": "src/index.js",
+    "scripts": {
+        "lint": "eslint .",
+        "test": "",
+        "prepublishOnly": "npm run test && npm run lint",
+        "preversion": "npm run lint",
+        "version": "git add -A src",
+        "postversion": "git push && git push --tags",
+        "publish": "git checkout master && git merge develop master && git push origin master"
+    },
+    "keywords": [
+        "joi",
+        "validation",
+        "schema"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/beanc16/joi-helpers.git"
+    },
+    "bugs": {
+        "url": "https://github.com/beanc16/joi-helpers/issues"
+    },
+    "homepage": "https://github.com/beanc16/joi-helpers#readme",
+    "files": [
+        "src/**/*"
+    ],
+    "dependencies": {
+        "joi": "^17.6.0"
+    }
+}
