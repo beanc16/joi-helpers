@@ -6,7 +6,7 @@ module.exports = {
     get: function (type)
     {
         return {
-            mongoDbObjectId: {
+            objectId: {
                 validate: function (value, helpers)
                 {
                     if (!ObjectId.isValid(value))
