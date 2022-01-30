@@ -9,9 +9,13 @@ Helpers to make [JOI](https://www.npmjs.com/package/joi) validation simpler.
 
 
 
-<!-- TODO: Make table of contents after documentation is done
 ## Table of Contents
--->
+- [@beanc16/joi-helpers](#beanc16joi-helpers)
+  - [Table of Contents](#table-of-contents)
+  - [Install](#install)
+  - [Usage](#usage)
+  - [Contributing](#contributing)
+  - [License](#license)
 
 
 ## Install
