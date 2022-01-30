@@ -25,7 +25,35 @@ $ npm install @beanc16/joi-helpers
 
 ## Usage
 ```js
-// TODO: Write usage documentation
+const { JoiRequired, validateJoiSchema } = require("@beanc16/joi-helpers");
+
+const payload = {
+    id: 1,
+    name: "Example",
+};
+
+/*
+The following schema is equivalent to:
+const mySchema = Joi.object({
+    id: Joi.number().required(),
+    name: Joi.string().required(),
+}).required();
+*/
+const mySchema = JoiRequired.object({
+    id: JoiRequired.number(),
+    name: JoiRequired.string(),
+});
+
+// Logs: { id: 1, name: "Example" }
+validateJoiSchema(mySchema, payload)
+.then((value) =>
+{
+    console.log(value);
+})
+.catch((error) =>
+{
+    console.log(error);
+});
 ```
 
 
