@@ -69,9 +69,9 @@ validateJoiSchema(mySchema, payload)
 ### MongoDB
 ```js
 const {
+    JoiMongoDb,
     JoiMongoDbObjectId,
     JoiMongoDbObjectIdRequired,
-    JoiMongoDb,
     validateJoiSchema,
 } = require("@beanc16/joi-helpers");
 
