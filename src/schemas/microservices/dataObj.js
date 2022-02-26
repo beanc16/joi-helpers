@@ -11,7 +11,9 @@ const dataObj = Joi.object()
            .min(1)
            .max(500),
         Joi.number()
+           /* eslint-disable-next-line no-loss-of-precision */
            .min(-999999999999999999999999999999)            // 30 digit
+           /* eslint-disable-next-line no-loss-of-precision */
            .max(999999999999999999999999999999),            // 30 digit
         Joi.boolean(),
         Joi.date(),
