@@ -78,7 +78,7 @@ const {
 const payload = getSomeMongoDbObjectId();
 
 /*
-The following schema is the equivalent of running:
+The following is the equivalent of running:
 const { ObjectId } = require("mongodb");
 const result = ObjectId.isValid(payload);
 
