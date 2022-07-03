@@ -1,6 +1,6 @@
 function joiSchemaIsValid(schema, payload)
 {
-    const { value, error } = schema.validate(payload);
+    const { error } = schema.validate(payload);
 
     if (error)
     {
