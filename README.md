@@ -34,7 +34,11 @@ $ npm install @beanc16/joi-helpers
 
 ### Basic
 ```js
-const { JoiRequired, validateJoiSchema } = require("@beanc16/joi-helpers");
+const {
+    JoiRequired,
+    validateJoiSchema,
+    joiSchemaIsValid,
+} = require("@beanc16/joi-helpers");
 
 const payload = {
     id: 1,
@@ -63,6 +67,16 @@ validateJoiSchema(mySchema, payload)
 {
     console.log(error);
 });
+
+// Logs: Schema is valid
+if (joiSchemaIsValid(mySchema, payload))
+{
+    console.log("Schema is valid");
+}
+else
+{
+    console.log("Schema is invalid");
+}
 ```
 
 
