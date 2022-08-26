@@ -33,6 +33,9 @@
     "files": [
         "src/**/*"
     ],
+    "publishConfig": {
+        "registry": "https://npm.pkg.github.com/"
+    },
     "dependencies": {
         "joi": "^17.6.0",
         "mongodb": "^4.3.1"
