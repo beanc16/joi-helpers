@@ -1,5 +1,3 @@
-const path = require('path');
-
 module.exports = {
     env: {
         'node': true,
@@ -16,9 +14,6 @@ module.exports = {
     parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
-        project: [
-            path.resolve(path.resolve(), 'tsconfig.json'),          // Required for: @typescript-eslint/recommended-requiring-type-checking
-        ],
     },
     rules: {
     },
