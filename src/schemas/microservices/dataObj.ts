@@ -1,30 +1,23 @@
-const Joi = require("joi");
+import Joi from 'joi';
 
 
 
-const dataObj = Joi.object()
+export const dataObj = Joi.object()
 .max(100)
 .pattern(
     Joi.string().max(100),                                  // Keys
     Joi.alternatives().try(                                 // Values
         Joi.string()
-           .min(1)
-           .max(500),
+            .min(1)
+            .max(500),
         Joi.number()
-           /* eslint-disable-next-line no-loss-of-precision */
+           /* eslint-disable-next-line @typescript-eslint/no-loss-of-precision */
            .min(-999999999999999999999999999999)            // 30 digit
-           /* eslint-disable-next-line no-loss-of-precision */
+           /* eslint-disable-next-line @typescript-eslint/no-loss-of-precision */
            .max(999999999999999999999999999999),            // 30 digit
         Joi.boolean(),
         Joi.date(),
     ),
 );
 
-const dataObjRequired = dataObj.required();
-
-
-
-module.exports = {
-    dataObj,
-    dataObjRequired,
-};
+export const dataObjRequired = dataObj.required();
